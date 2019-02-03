@@ -1,7 +1,7 @@
 hr
 ==
 
-its practice
+CLI for update hr databatabase based on an input json file.
 
 Preparing the Development
 -------------------------
@@ -17,5 +17,31 @@ List of things that people need to have
 Usage
 -----
 
+Pass in the full path of the json file, and optionally an export flag.
+
+Example without the export flag:
+
+::
+
+    $ hr /path/to/the/inventory.json
+
+Example w/ export flag
+
+::
+
+   $ hr --export /path/to/the/inventory.json
+
 Running Tests
 -------------
+
+Run tests locally using ``make`` if virtualenv is active:
+
+::
+
+    $ make
+
+If virtualenv is not active then use:
+
+::
+
+    $ pipenv run make

@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-with open('READ.rst', encoding='UTF-8') as f:
+with open('README.rst', encoding='UTF-8') as f:
     readme = f.read()
 
 setup(
