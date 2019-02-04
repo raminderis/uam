@@ -14,6 +14,8 @@ setup(
     packages=find_packages('src'),
     package_dir={'': 'src'},
     entry_points={
-        'console_scripts': 'hr=hr.cli:main'
-    },
+        'console_scripts': [
+            'hr=hr.cli:main',
+        ]
+    }
 )
