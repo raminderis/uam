@@ -51,12 +51,7 @@ def test_inventory_dump(mocker):
     dest_file = tempfile.NamedTemporaryFile(delete=False)
     dest_file.close()
 
-    # spwd.getspnam can't be used by non-root user normally.
-    # Mock the implemntation so that we can test.
     mocker.patch('spwd.getspnam', return_value=mocker.Mock(sp_pwd='password'))
-
-    # grp.getgrall will return the values from the test machine.
-    # To get consistent results we need to mock this.
     mocker.patch('grp.getgrall', return_value=[
         mocker.Mock(gr_name='super', gr_mem=['bob']),
         mocker.Mock(gr_name='other', gr_mem=[]),
